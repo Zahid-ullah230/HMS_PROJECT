@@ -1,0 +1,57 @@
+{
+  "doctors": [
+    {
+      "id": "1",
+      "name": "Dr. Ali Khan",
+      "specialization": "Cardiologist",
+      "department": "Cardiology"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Sara Ahmed",
+      "specialization": "Neurologist",
+      "department": "Neurology"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Asif Raza",
+      "specialization": "Pediatrician",
+      "department": "Pediatrics"
+    }
+  ],
+  "patients": [
+    {
+      "id": "1",
+      "first_name": "Zahid",
+      "last_name": "Khan",
+      "dob": "1995-04-12",
+      "gender": "Male",
+      "phone": "03001234567",
+      "blood_group": "B+"
+    }
+  ],
+  "appointments": [
+    {
+      "patient_name": "Zahid Khan",
+      "app_date": "2026-05-28",
+      "reason": "Regular Heart Checkup",
+      "status": "Completed",
+      "id": "1"
+    }
+  ],
+  "billing": [
+    {
+      "id": "1",
+      "patient_name": "Zahid Khan",
+      "total_amount": 2500,
+      "payment_status": "Paid"
+    },
+    {
+      "id": "2",
+      "patient_name": "Sana Wali",
+      "total_amount": 4000,
+      "payment_status": "Pending"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
