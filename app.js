@@ -18,7 +18,7 @@ async function fetchDoctors(filterDept = "All") {
         errorState.classList.add('d-none');
 
         const response = await fetch(`${API_URL}/doctors`);
-        if (!response.ok) throw new Error("Database network check failed."); // response.ok check
+        if (!response.ok) throw new Error("Database network check failed."); 
 
         const doctors = await response.json();
         
