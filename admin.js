@@ -1,6 +1,6 @@
 const API_URL = "http://localhost:3000";
 
-// DOM Grid Destinations & Stat Targets
+
 const adminAppointmentsGrid = document.getElementById('adminAppointmentsGrid');
 const statAppointments = document.getElementById('statAppointments');
 const statRevenue = document.getElementById('statRevenue');
@@ -10,7 +10,7 @@ const editForm = document.getElementById('editForm');
 
 let bootstrapEditModal;
 
-// 1. Fetch, Extract Statistics, and Render Admin Dashboard Grid
+
 async function loadAdminDashboard() {
     try {
        
@@ -77,14 +77,14 @@ async function openEditFlow(recordId) {
         
         const recordData = await response.json();
 
-        // Inject current record values straight into target input fields
+        
         document.getElementById('editRecordId').value = recordData.id;
         document.getElementById('editPatientName').value = recordData.patient_name;
         document.getElementById('editAppDate').value = recordData.app_date;
         document.getElementById('editAppReason').value = recordData.reason;
         document.getElementById('editStatus').value = recordData.status;
 
-        // Trigger safe programmatic show call to open Bootstrap modal view
+        
         if (!bootstrapEditModal) {
             bootstrapEditModal = new bootstrap.Modal(document.getElementById('editModal'));
         }
@@ -115,7 +115,7 @@ editForm.addEventListener('submit', async (e) => {
 
         if (response.ok) {
             bootstrapEditModal.hide();
-            loadAdminDashboard(); // Refresh metrics instantly
+            loadAdminDashboard(); 
         }
     } catch (err) {
         console.error(err);
